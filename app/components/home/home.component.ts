@@ -12,8 +12,8 @@ export class HomeComponent {
     users: {};
 
     constructor(http: Http) {
-        http.get("/users")
-            .map(data => data.json())
-            .subscribe((data) => this.users = data);
+        // http.get("/server")
+        //     .map(data => data.json())
+        //     .subscribe((data) => this.users = data);
     }
 }
