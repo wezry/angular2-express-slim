@@ -6,9 +6,11 @@ import { AppComponent }  from './app.component';
 import { AboutComponent } from "./components/about/about.component";
 import { routing } from "./routes";
 import { HomeComponent } from "./components/home/home.component";
+import {MaterialModule} from "@angular/material";
 
 @NgModule({
     imports: [
+      MaterialModule.forRoot(),
         BrowserModule,
         HttpModule,
         JsonpModule,

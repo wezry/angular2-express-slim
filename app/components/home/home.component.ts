@@ -11,9 +11,15 @@ export class HomeComponent {
     name: string = "Home page";
     users: {};
 
-    constructor(http: Http) {
+    constructor(public http: Http) {
         // http.get("/server")
         //     .map(data => data.json())
         //     .subscribe((data) => this.users = data);
+    }
+
+    openDialog() {
+      this.http.get("/users/add")
+        .map(data => data.json())
+        .subscribe((data) => this.users = data);
     }
 }
